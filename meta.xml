@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension>
+    <id>spam-filter-manager</id>
+    <version>1.0.0</version>
+    <name>Spam Filter Manager</name>
+    <description>Allows mail users to manage their SpamAssassin whitelist and blacklist entries</description>
+    <vendor>Custom Development</vendor>
+    <type>panel</type>
+    <plesk-version>18.0.0</plesk-version>
+    <panel-version>18.0.0</panel-version>
+    <api-version>1.6.0.0</api-version>
+    <category>mail</category>
+    <homepage>https://example.com/spam-filter-manager</homepage>
+    <icon>icon.png</icon>
+    <logo>logo.png</logo>
+    <permissions>
+        <permission>spam-filter-manager:manage</permission>
+    </permissions>
+    <hooks>
+        <hook>spam-filter-manager:mail-user-tab</hook>
+    </hooks>
+    <dependencies>
+        <php-version>7.4</php-version>
+        <node-version>14.0.0</node-version>
+    </dependencies>
+    <configuration>
+        <admin-config>admin-config.php</admin-config>
+    </configuration>
+</extension>

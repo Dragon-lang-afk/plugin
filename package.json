@@ -1,0 +1,51 @@
+{
+  "name": "spam-filter-manager",
+  "version": "1.0.0",
+  "description": "Plesk extension for managing SpamAssassin whitelist/blacklist",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint . --ext .js,.json",
+    "build": "npm run build:frontend",
+    "build:frontend": "webpack --mode production",
+    "install-extension": "node scripts/install.js",
+    "uninstall-extension": "node scripts/uninstall.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.0.0",
+    "express-rate-limit": "^6.8.1",
+    "express-validator": "^7.0.1",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "winston": "^3.10.0",
+    "winston-daily-rotate-file": "^4.7.1",
+    "imap": "^0.8.19",
+    "node-cron": "^3.0.2",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "jest": "^29.6.2",
+    "supertest": "^6.3.3",
+    "nodemon": "^3.0.1",
+    "eslint": "^8.47.0",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "css-loader": "^6.8.1",
+    "style-loader": "^3.3.3",
+    "html-webpack-plugin": "^5.5.3"
+  },
+  "keywords": [
+    "plesk",
+    "spamassassin",
+    "email",
+    "whitelist",
+    "blacklist"
+  ],
+  "author": "Custom Development",
+  "license": "MIT"
+}
